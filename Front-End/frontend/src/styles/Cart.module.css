@@ -1,0 +1,118 @@
+.cartContainer {
+  max-width: 1000px;
+  margin: 150px auto;
+  padding: 20px;
+  background-color: #fdfdfd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cartTitle {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardContent h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.cardContent p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.cardContent input {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card button {
+  background-color: #083231;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 10px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.card button:hover {
+  background-color: #1b8c8a;
+}
+
+.totalPrice {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  color: #111;
+}
+
+.clearCartBtn {
+  margin-top: 10px;
+  background-color: #0077b6;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.clearCartBtn:hover {
+  background-color: #0096c7;
+}
+
+.emptyCart {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 40px;
+}

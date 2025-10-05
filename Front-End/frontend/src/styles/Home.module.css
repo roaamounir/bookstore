@@ -1,0 +1,74 @@
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.pinimg.com/736x/13/36/ae/1336ae5845f6e180b769e97b87d03704.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 80px;
+  border-radius: 12px;
+  text-align: center;
+  color: #d8ffdb;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 1s forwards 0.3s;
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 1s forwards 0.6s;
+}
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  background-color: #023535;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 1s forwards 0.9s;
+}
+
+.button:hover {
+  background-color: #008f8c;
+  transform: scale(1.05);
+}
+
+/* Keyframes */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

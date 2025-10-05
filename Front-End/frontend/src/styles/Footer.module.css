@@ -1,0 +1,65 @@
+.footer {
+  background: linear-gradient(135deg, #012626, #023535);
+  color: #d8ffdb;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer .brand h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer .brand p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #bdf6d5;
+}
+
+.footer .links {
+  margin-bottom: 25px;
+}
+
+.footer .links a {
+  margin: 0 15px;
+  color: #d8ffdb;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .links a:hover {
+  color: #00b894;
+  transform: translateY(-3px);
+}
+
+.footer .social {
+  margin-bottom: 25px;
+}
+
+.footer .social button {
+  margin: 0 10px;
+  background-color: #00b894;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.footer .social button:hover {
+  background-color: #d8ffdb;
+  color: #023535;
+  transform: scale(1.2);
+}
+
+.footer .copy {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #bdf6d5;
+}

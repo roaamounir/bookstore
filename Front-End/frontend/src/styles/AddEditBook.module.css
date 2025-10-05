@@ -1,0 +1,59 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #023535;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 650px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #d8ffdb;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #023535;
+  font-family: "Roboto", sans-serif;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  color: #023535;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.input:focus{
+    border: #008f8c;
+}
+.submitBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #023535;
+  color: #d8ffdb;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #008f8c;
+}

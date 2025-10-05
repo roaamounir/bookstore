@@ -1,0 +1,168 @@
+body {
+  background-color: #012626;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.shopContainer {
+  padding: 100px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #d8ffdb;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0 40px;
+}
+
+.controls select {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #008f8c;
+  font-size: 14px;
+  background-color: #023535;
+  color: #d8ffdb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls select:hover {
+  background-color: #008f8c;
+  color: #fff;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background-color: #c7ffed;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 15px;
+  flex: 1;
+}
+
+.cardContent h3 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #023535;
+}
+
+.cardContent p {
+  font-size: 14px;
+  color: #303030;
+  margin: 5px 0;
+}
+
+.cardContent .price {
+  font-weight: 700;
+  color: #008f8c;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+}
+
+.detailsBtn {
+  background-color: #023535;
+  color: #d8ffdb;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.detailsBtn:hover {
+  background-color: #008f8c;
+  transform: scale(1.05);
+}
+
+.cardActions svg {
+  cursor: pointer;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.cardActions svg:hover {
+  transform: scale(1.2);
+}
+
+.cardActions .fa-shopping-cart {
+  color: #023535;
+}
+
+.cardActions .fa-heart {
+  color: gray;
+}
+
+.cardActions .fa-heart.active {
+  color: red;
+}
+
+.addButton {
+  background-color: #008f8c;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #00b894;
+  transform: scale(1.05);
+}
