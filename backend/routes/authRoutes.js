@@ -11,14 +11,12 @@ router.post("/register", async (req, res) => {
     if (await User.findOne({ username }))
       return res.status(400).json({ message: "Username exists" });
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-
     const finalRole =
       role === "admin" ? "admin" : role === "owner" ? "owner" : "user";
 
     const user = await User.create({
       username,
-      password: hashedPassword,
+      password,
       name,
       role: finalRole,
     });
@@ -28,6 +26,8 @@ router.post("/register", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+
 
 router.post("/login", async (req, res) => {
   const { username, password } = req.body;
