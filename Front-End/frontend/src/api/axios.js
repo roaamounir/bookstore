@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://bookstore-production-3bee.up.railway.app",
 });
 
 axiosInstance.interceptors.request.use(
@@ -23,3 +23,4 @@ axiosInstance.interceptors.request.use(
 
 
 export default axiosInstance;
+
