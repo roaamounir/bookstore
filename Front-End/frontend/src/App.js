@@ -1,14 +1,6 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import { useSelector } from "react-redux";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
 import Shop from "./pages/Shop";
 import Home from "./pages/Home";
 import BookDetails from "./pages/BookDetails";
@@ -21,7 +13,6 @@ import BooksDashboard from "./pages/dashboard/Products";
 import DashboardHome from "./pages/dashboard/DashboardHome";
 import OrdersDashboard from "./pages/dashboard/Orders";
 import UsersDashboard from "./pages/dashboard/Users";
-import ProtectedRoute from "./ProtectedRoute";
 import Favourites from "./pages/Favourites";
 import Cart from "./pages/Cart";
 import PaymentSuccess from "./pages/PaymentSuccess";
@@ -29,14 +20,10 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 
 export default function App() {
-  const { token, role, user } = useSelector((state) => state.auth);
-
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/register" />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Home />} />
 
         <Route element={<PublicLayout />}>
           <Route path="/home" element={<Home />} />
@@ -47,39 +34,15 @@ export default function App() {
           <Route path="/favs" element={<Favourites />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/payment-success" element={<PaymentSuccess />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
         </Route>
 
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute roles={["admin", "owner"]}>
-              <DashboardLayout />
-            </ProtectedRoute>
-          }
-        >
+        <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardHome />} />
-          <Route
-            path="books"
-            element={<BooksDashboard role={role} user={user} />}
-          />
-          <Route
-            path="orders"
-            element={
-              <ProtectedRoute roles={["admin"]}>
-                <OrdersDashboard />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="users"
-            element={
-              <ProtectedRoute roles={["admin"]}>
-                <UsersDashboard />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="books" element={<BooksDashboard />} />
+          <Route path="orders" element={<OrdersDashboard />} />
+          <Route path="users" element={<UsersDashboard />} />
         </Route>
       </Routes>
     </Router>
