@@ -5,7 +5,11 @@ export const loginUser = createAsyncThunk(
   "auth/loginUser",
   async ({ username, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post("/auth/login", { username, password });
+      const response = await axios.post(
+        "/auth/login",
+        { username, password },
+        { withCredentials: true }
+      );
       return response.data;
     } catch (err) {
       return rejectWithValue(err.response?.data?.message || "Login failed");
@@ -17,10 +21,12 @@ export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async ({ username, password }, { rejectWithValue }) => {
     try {
-      const response = await axios.post("/auth/register", {
-        username,
-        password,
-      });
+      const response = await axios.post(
+        "/auth/register",
+        { username, password },
+        { withCredentials: true }
+      );
+
       return response.data;
     } catch (err) {
       return rejectWithValue(
