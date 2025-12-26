@@ -9,7 +9,7 @@ const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 };
 
-router.post("/Register", async (req, res) => {
+router.post("/register", async (req, res) => {
   const { username, password, name, role } = req.body;
   try {
     if (await User.findOne({ username }))
