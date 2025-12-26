@@ -8,7 +8,7 @@ import AddEditBook from "./pages/AddEditBook";
 
 import PublicLayout from "./layouts/PublicLayout";
 import DashboardLayout from "./pages/dashboard/DashboardLayout";
-
+import Login from "./pages/Login";
 import BooksDashboard from "./pages/dashboard/Products";
 import DashboardHome from "./pages/dashboard/DashboardHome";
 import OrdersDashboard from "./pages/dashboard/Orders";
@@ -23,7 +23,7 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Login />} />
 
         <Route element={<PublicLayout />}>
           <Route path="/home" element={<Home />} />
