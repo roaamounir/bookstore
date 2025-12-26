@@ -54,7 +54,7 @@ const Register = () => {
       {error && <p className={styles.error}>{error}</p>}
       <p className={styles.text}>
         Already have an account?{" "}
-        <Link to="/login" className={styles.link}>
+        <Link to="/" className={styles.link}>
           Login
         </Link>
       </p>

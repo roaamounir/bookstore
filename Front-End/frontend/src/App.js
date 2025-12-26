@@ -29,10 +29,10 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/Register" element={<Register />} />
 
         <Route element={<PublicLayout />}>
           <Route path="/home" element={<Home />} />
-          <Route path="/Register" element={<Register />} />
 
           <Route path="/shop" element={<Shop />} />
           <Route path="/books/:id" element={<BookDetails />} />
