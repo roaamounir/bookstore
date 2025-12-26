@@ -29,7 +29,7 @@ export default function Header({ onSearch }) {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/");
   };
 
   const toggleDrawer = () => setMobileOpen(!mobileOpen);

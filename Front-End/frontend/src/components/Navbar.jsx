@@ -24,7 +24,7 @@ const Nav = () => {
 
   const handleLogout = () => {
     dispatch(logout());
-    navigate("/login");
+    navigate("/");
   };
 
   const handleSearchSubmit = (e) => {
