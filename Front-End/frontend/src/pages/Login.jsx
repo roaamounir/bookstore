@@ -53,7 +53,7 @@ const Login = () => {
       {error && <p className={styles.error}>{error}</p>}
       <p className={styles.text}>
         Don’t have an account?{" "}
-        <Link to="/register" className={styles.link}>
+        <Link to="/Register" className={styles.link}>
           Register
         </Link>
       </p>
