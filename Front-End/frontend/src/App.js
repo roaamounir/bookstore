@@ -1,11 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Shop from "./pages/Shop";
 import Home from "./pages/Home";
 import BookDetails from "./pages/BookDetails";
 import AddEditBook from "./pages/AddEditBook";
-
+import register from "./pages/Register";
 import PublicLayout from "./layouts/PublicLayout";
 import DashboardLayout from "./pages/dashboard/DashboardLayout";
 import Login from "./pages/Login";
@@ -27,6 +32,8 @@ export default function App() {
 
         <Route element={<PublicLayout />}>
           <Route path="/home" element={<Home />} />
+          <Route path="/register" element={<register />} />
+
           <Route path="/shop" element={<Shop />} />
           <Route path="/books/:id" element={<BookDetails />} />
           <Route path="/add-book" element={<AddEditBook />} />
